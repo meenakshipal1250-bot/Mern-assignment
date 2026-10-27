@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register and explore upcoming events.">
+    <meta name="theme-color" content="#2563eb">
+    <title>Register | Account Registration and Events</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Create an Account</h1>
+        <form>
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" required>
+            </p>
+            <p>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+            </p>
+            <p>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </p>
+            <fieldset>
+                <legend>Preferred contact method</legend>
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+            </fieldset>
+            <fieldset>
+                <legend>Interests</legend>
+                <input type="checkbox" id="interest-html" name="interests" value="html">
+                <label for="interest-html">HTML</label>
+                <input type="checkbox" id="interest-css" name="interests" value="css">
+                <label for="interest-css">CSS</label>
+                <input type="checkbox" id="interest-javascript" name="interests" value="javascript">
+                <label for="interest-javascript">JavaScript</label>
+            </fieldset>
+            <p>
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="">Choose a topic</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea>
+            </p>
+            <button type="submit">Create account</button>
+        </form>
+
+        <section>
+            <h2>Upcoming Events</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Event</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Attendees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML Workshop</td>
+                        <td>November 5, 2026</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development Meetup</td>
+                        <td>November 12, 2026</td>
+                        <td>38</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Total attendees</th>
+                        <td>62</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
