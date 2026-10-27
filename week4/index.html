@@ -21,6 +21,43 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" autocomplete="new-password" required>
             </p>
+            <p>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+            </p>
+            <p>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </p>
+            <fieldset>
+                <legend>Preferred contact method</legend>
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+            </fieldset>
+            <fieldset>
+                <legend>Interests</legend>
+                <input type="checkbox" id="interest-html" name="interests" value="html">
+                <label for="interest-html">HTML</label>
+                <input type="checkbox" id="interest-css" name="interests" value="css">
+                <label for="interest-css">CSS</label>
+                <input type="checkbox" id="interest-javascript" name="interests" value="javascript">
+                <label for="interest-javascript">JavaScript</label>
+            </fieldset>
+            <p>
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="">Choose a topic</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea>
+            </p>
             <button type="submit">Create account</button>
         </form>
     </main>
