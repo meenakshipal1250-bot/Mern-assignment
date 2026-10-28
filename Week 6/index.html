@@ -18,7 +18,7 @@
             font-family: Arial, sans-serif;
         }
 
-        .topbar {
+        .site-header {
             position: sticky;
             top: 0;
             z-index: 20;
@@ -26,19 +26,19 @@
             align-items: center;
             justify-content: space-between;
             padding: 14px 28px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid #e5e7eb;
             box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
         }
 
-        .brand {
+        .site-brand {
             font-size: 1.2rem;
             font-weight: 700;
             color: #111827;
         }
 
-        .nav {
+        .site-nav {
             color: #475569;
             font-weight: 600;
         }
@@ -48,36 +48,36 @@
             margin: 0 auto;
         }
 
-        h1,
-        .intro {
+        .page-title,
+        .page-intro {
             text-align: center;
         }
 
-        h1 {
+        .page-title {
             margin: 0 0 10px;
             font-size: clamp(2rem, 5vw, 2.8rem);
         }
 
-        .intro {
+        .page-intro {
             margin: 0 auto 36px;
             max-width: 560px;
             color: #64748b;
             line-height: 1.6;
         }
 
-        .card-grid {
+        .member-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 24px;
         }
 
-        .profile-card {
+        .member-card {
             position: relative;
             padding: 28px;
             border: 2px solid var(--accent);
             border-radius: 22px;
             background: var(--surface);
-            box-shadow: 0 12px 30px rgb(15 23 42 / 8%);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
             text-align: center;
         }
 
@@ -98,21 +98,21 @@
             cursor: pointer;
         }
 
-        .profile-card--blue {
+        .member-card--blue {
             --accent: #2563eb;
             --surface: #eff6ff;
-            --avatar: #bfdbfe;
-            --text-accent: #1d4ed8;
+            --avatar-bg: #bfdbfe;
+            --accent-text: #1d4ed8;
         }
 
-        .profile-card--pink {
+        .member-card--pink {
             --accent: #db2777;
             --surface: #fdf2f8;
-            --avatar: #fbcfe8;
-            --text-accent: #be185d;
+            --avatar-bg: #fbcfe8;
+            --accent-text: #be185d;
         }
 
-        .avatar {
+        .member-avatar {
             width: 104px;
             height: 104px;
             display: grid;
@@ -120,25 +120,25 @@
             margin: 0 auto 18px;
             border: 5px solid #fff;
             border-radius: 50%;
-            background: var(--avatar);
-            color: var(--text-accent);
+            background: var(--avatar-bg);
+            color: var(--accent-text);
             box-shadow: 0 0 0 2px var(--accent);
             font-size: 2rem;
             font-weight: 700;
         }
 
-        .profile-card h2 {
+        .member-name {
             margin: 0 0 6px;
             font-size: 1.45rem;
         }
 
-        .role {
+        .member-role {
             margin: 0 0 16px;
-            color: var(--text-accent);
+            color: var(--accent-text);
             font-weight: 700;
         }
 
-        .bio {
+        .member-bio {
             height: 72px;
             overflow: auto;
             margin: 0;
@@ -151,7 +151,7 @@
                 padding: 32px 16px;
             }
 
-            .card-grid {
+            .member-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
                 margin: 0 auto;
@@ -160,32 +160,32 @@
     </style>
 </head>
 <body>
-    <header class="topbar">
-        <div class="brand">Acme Studio</div>
-        <div class="nav">Team</div>
+    <header class="site-header">
+        <div class="site-brand">Acme Studio</div>
+        <div class="site-nav">Team</div>
     </header>
 
-    <button class="add-button" aria-label="Add new member">+</button>
+    <button class="add-button" aria-label="Add a new team member">+</button>
 
     <main>
-        <h1>Meet the Team</h1>
-        <p class="intro">
-            Two versions of the same profile card design, styled with different colors.
+        <h1 class="page-title">Meet the Team</h1>
+        <p class="page-intro">
+            Two polished versions of the same profile card design, each styled in a different color palette.
         </p>
 
-        <section class="card-grid" aria-label="Team member profile cards">
-            <article class="profile-card profile-card--blue">
-                <div class="avatar" aria-hidden="true">AJ</div>
-                <h2>Alex Johnson</h2>
-                <p class="role">UI Designer</p>
-                <p class="bio">Creates friendly, thoughtful interfaces that make everyday tasks feel simple.</p>
+        <section class="member-grid" aria-label="Team member profile cards">
+            <article class="member-card member-card--blue">
+                <div class="member-avatar" aria-hidden="true">AJ</div>
+                <h2 class="member-name">Alex Johnson</h2>
+                <p class="member-role">UI Designer</p>
+                <p class="member-bio">Designs thoughtful, user-friendly interfaces that make digital experiences feel simple and smooth.</p>
             </article>
 
-            <article class="profile-card profile-card--pink">
-                <div class="avatar" aria-hidden="true">SM</div>
-                <h2>Sam Morgan</h2>
-                <p class="role">Frontend Developer</p>
-                <p class="bio">Brings designs to life with accessible, responsive, and reliable code.</p>
+            <article class="member-card member-card--pink">
+                <div class="member-avatar" aria-hidden="true">SM</div>
+                <h2 class="member-name">Sam Morgan</h2>
+                <p class="member-role">Frontend Developer</p>
+                <p class="member-bio">Builds accessible, responsive experiences that turn creative ideas into polished products.</p>
             </article>
         </section>
     </main>
