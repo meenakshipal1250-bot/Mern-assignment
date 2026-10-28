@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #f1f5f9;
+            color: #172033;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            width: min(100%, 760px);
+            margin: 0 auto;
+        }
+
+        h1,
+        .intro {
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .intro {
+            margin: 0 auto 32px;
+            max-width: 560px;
+            color: #526078;
+            line-height: 1.6;
+        }
+
+        .box-model {
+            margin: 0 auto;
+            padding: 28px;
+            border: 3px dashed #d97706;
+            background: #fff7ed;
+            border-radius: 18px;
+        }
+
+        .margin-label {
+            color: #9a3412;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .border-layer {
+            margin-top: 12px;
+            padding: 20px;
+            border: 8px solid #2563eb;
+            background: #dbeafe;
+            border-radius: 12px;
+        }
+
+        .layer-label {
+            margin: 0 0 12px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .padding-layer {
+            padding: 24px;
+            background: #dcfce7;
+            border: 2px solid #16a34a;
+            border-radius: 8px;
+        }
+
+        .padding-layer > .layer-label {
+            color: #166534;
+        }
+
+        .content-box {
+            min-height: 120px;
+            display: grid;
+            place-content: center;
+            padding: 16px;
+            background: #fff;
+            border: 2px solid #64748b;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .content-box strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .content-box span {
+            color: #526078;
+        }
+
+        .details {
+            margin-top: 28px;
+            padding: 20px 24px;
+            background: #fff;
+            border: 1px solid #dbe2ea;
+            border-radius: 12px;
+            line-height: 1.7;
+        }
+
+        .details h2 {
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .details p {
+            margin: 0;
+            color: #526078;
+        }
+
+        code {
+            padding: 2px 6px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            color: #1d4ed8;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 28px 14px;
+            }
+
+            .box-model {
+                padding: 18px;
+            }
+
+            .border-layer {
+                padding: 14px;
+            }
+
+            .padding-layer {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>CSS Box Model</h1>
+        <p class="intro">
+            Every HTML element is a box. This example labels each layer and uses
+            <code>box-sizing: border-box</code> so the declared width includes padding and border.
+        </p>
+
+        <section class="box-model" aria-label="Box model diagram">
+            <div class="margin-label">MARGIN — space outside the border</div>
+            <div class="border-layer">
+                <p class="layer-label">BORDER — the edge around the element</p>
+                <div class="padding-layer">
+                    <p class="layer-label">PADDING — space inside the border</p>
+                    <div class="content-box">
+                        <strong>CONTENT</strong>
+                        <span>Text, images, or other child elements</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details" aria-labelledby="box-sizing-heading">
+            <h2 id="box-sizing-heading">What does border-box do?</h2>
+            <p>
+                With <code>box-sizing: border-box</code>, an element's declared width
+                includes its content, padding, and border. Margin stays outside the
+                declared width and creates space between elements.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
