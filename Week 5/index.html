@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Selector Demo</title>
     <style>
         *,
         *::before,
@@ -14,11 +14,45 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        h1 {
+            color: #1d3557;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, #457b9d, #a8dadc);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .card {
+            width: 260px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
         }
     </style>
 </head>
 
 <body>
-    <p>Welcome to the index page!</p>
+    <h1 id="hero">Welcome to the Selector Demo</h1>
+
+    <div class="card">
+        <h2>Card Section</h2>
+        <p>This card uses the .card class selector.</p>
+    </div>
+
+    <div class="card">
+        <h2>Another Card</h2>
+        <p>This is another element styled by the same class selector.</p>
+    </div>
 </body>
 </html>
