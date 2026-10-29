@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid </title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-areas:
+                "head head"
+                "side main"
+                "foot foot";
+            gap: 12px;
+            padding: 12px;
+
+        }
+
+        .head {
+            grid-area: head;
+            background: #e24a87;
+        }
+
+        .side {
+            grid-area: side;
+            background: #23f57e;
+        }
+
+        .main {
+            grid-area: main;
+            background: red;
+            
+        }
+
+        .foot {
+            grid-area: foot;
+            background: #9013fe;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px;
+            color: white;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "head"
+                    "side"
+                    "main"
+                    "foot";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="box head"><span aria-hidden="true">🏠</span><span>Head</span></header>
+        <aside class="box side"><span aria-hidden="true">📋</span><span>Side</span></aside>
+        <main class="box main"><span aria-hidden="true">📝</span><span>Main</span></main>
+        <footer class="box foot"><span aria-hidden="true">🔗</span><span>Foot</span></footer>
+    </div>
+</body>
+</html>
