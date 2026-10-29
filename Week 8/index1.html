@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Areas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            padding: 12px;
+        }
+
+        .head {
+            grid-area: head;
+            background: #e24a87;
+        }
+
+        .side {
+            grid-area: side;
+            background: #23f57e;
+        }
+
+        .main {
+            grid-area: main;
+            background: #7ed321;
+        }
+
+        .foot {
+            grid-area: foot;
+            background: #9013fe;
+        }
+
+        .box {
+            padding: 24px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "head"
+                    "side"
+                    "main"
+                    "foot";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="box head">Head</header>
+        <aside class="box side">Side</aside>
+        <main class="box main">Main</main>
+        <footer class="box foot">Foot</footer>
+    </div>
+</body>
+</html>
