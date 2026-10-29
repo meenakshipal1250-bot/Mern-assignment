@@ -47,9 +47,12 @@
         }
 
         .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             padding: 24px;
             color: white;
-            text-align: center;
             font-size: 20px;
         }
 
@@ -67,10 +70,10 @@
 </head>
 <body>
     <div class="container">
-        <header class="box head">Head</header>
-        <aside class="box side">Side</aside>
-        <main class="box main">Main</main>
-        <footer class="box foot">Foot</footer>
+        <header class="box head"><span aria-hidden="true">🏠</span><span>Head</span></header>
+        <aside class="box side"><span aria-hidden="true">📋</span><span>Side</span></aside>
+        <main class="box main"><span aria-hidden="true">📝</span><span>Main</span></main>
+        <footer class="box foot"><span aria-hidden="true">🔗</span><span>Foot</span></footer>
     </div>
 </body>
 </html>
